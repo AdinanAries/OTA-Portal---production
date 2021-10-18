@@ -1355,7 +1355,7 @@ top_noti_fication_close_btn.addEventListener("click", ()=>{
 $(document).ready(()=>{
   
   setTimeout(()=>{
-    $("#top_noti_fication_div").slideDown("fast");
+    //$("#top_noti_fication_div").slideDown("fast");
     
   }, 5000);
 
@@ -1737,12 +1737,12 @@ function activate_login_fld(number){
                 </span>
               </p>
               <div style="cursor: pointer; margin-top: 20px; display: flex; flex-direction: row !important; border-radius: 4px; overflow: hidden !important;">
-                <div onclick="select_popular_city_for_flight_search('${cities_row[0].iata_code}', '${cities_row[0].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
+                <div onclick="select_popular_city_for_flight_search('${cities_row[0].iata_code}', '${cities_row[0].input_city_name}');" style="padding: 15px 10px; width: calc(100% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
                   Search Flights
                 </div>
-                <div onclick="select_popular_city_for_hotel_search('${cities_row[0].iata_code}', '${cities_row[0].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
+                <!--div onclick="select_popular_city_for_hotel_search('${cities_row[0].iata_code}', '${cities_row[0].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
                   Search Hotels
-                </div>
+                </div-->
               </div>
             </div>
           </div>
@@ -1762,12 +1762,12 @@ function activate_login_fld(number){
                 </span>
               </p>
               <div style="cursor: pointer; margin-top: 20px; display: flex; flex-direction: row !important; border-radius: 4px; overflow: hidden !important;">
-                <div onclick="select_popular_city_for_flight_search('${cities_row[1].iata_code}', '${cities_row[1].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
+                <div onclick="select_popular_city_for_flight_search('${cities_row[1].iata_code}', '${cities_row[1].input_city_name}');" style="padding: 15px 10px; width: calc(100% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
                   Search Flights
                 </div>
-                <div onclick="select_popular_city_for_hotel_search('${cities_row[1].iata_code}', '${cities_row[1].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
+                <!--div onclick="select_popular_city_for_hotel_search('${cities_row[1].iata_code}', '${cities_row[1].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
                   Search Hotels
-                </div>
+                </div-->
               </div>
             </div>
           </div>
@@ -1787,12 +1787,12 @@ function activate_login_fld(number){
                 </span>
               </p>
               <div style="cursor: pointer; margin-top: 20px; display: flex; flex-direction: row !important; border-radius: 4px; overflow: hidden !important;">
-                <div onclick="select_popular_city_for_flight_search('${cities_row[2].iata_code}', '${cities_row[2].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
+                <div onclick="select_popular_city_for_flight_search('${cities_row[2].iata_code}', '${cities_row[2].input_city_name}');" style="padding: 15px 10px; width: calc(100% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
                   Search Flights
                 </div>
-                <div onclick="select_popular_city_for_hotel_search('${cities_row[2].iata_code}', '${cities_row[2].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
+                <!--div onclick="select_popular_city_for_hotel_search('${cities_row[2].iata_code}', '${cities_row[2].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
                   Search Hotels
-                </div>
+                </div-->
               </div>
             </div>
           </div>
@@ -1812,12 +1812,12 @@ function activate_login_fld(number){
                 </span>
               </p>
               <div style="cursor: pointer; margin-top: 20px; display: flex; flex-direction: row !important; border-radius: 4px; overflow: hidden !important;">
-                <div onclick="select_popular_city_for_flight_search('${cities_row[3].iata_code}', '${cities_row[3].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
+                <div onclick="select_popular_city_for_flight_search('${cities_row[3].iata_code}', '${cities_row[3].input_city_name}');" style="padding: 15px 10px; width: calc(100% - 20px) !important; background-color:rgb(8, 77, 122);  color: white; font-size: 13px; text-align: center;">
                   Search Flights
                 </div>
-                <div onclick="select_popular_city_for_hotel_search('${cities_row[3].iata_code}', '${cities_row[3].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
+                <!--div onclick="select_popular_city_for_hotel_search('${cities_row[3].iata_code}', '${cities_row[3].input_city_name}');" style="padding: 15px 10px; width: calc(50% - 20px) !important; background-color:rgb(0, 177, 139); color: white; font-size: 13px; text-align: center;">
                   Search Hotels
-                </div>
+                </div-->
               </div>
             </div>
           </div>

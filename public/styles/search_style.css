@@ -2087,6 +2087,9 @@ footer a {
   #main_menu_car_rentals_option {
     display: none;
   }
+  #main_menu_car_help_option {
+    display: none;
+  }
   #mobile_search_change_type_of_service {
     display: flex;
     flex-direction: row !important;

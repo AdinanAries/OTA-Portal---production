@@ -39,6 +39,8 @@ var amadeus = new Amadeus({
   clientSecret: 'PAtVLCWxpRGsYPdU'
 });
 
+let amadeus_base_url = "test.api.amadeus.com";
+
 //stripe connection
 const stripe = require("stripe")(process.env.STRIPE_SECRETE_KEY);
 
@@ -120,7 +122,7 @@ function Amadues_OAuth(){
 
   // request option
   var options = {
-    host: 'test.api.amadeus.com',
+    host: amadeus_base_url, //'test.api.amadeus.com',
     method: 'POST',
     path: '/v1/security/oauth2/token',
     headers: {
@@ -450,7 +452,7 @@ app.post('/flightpriceanalysis/', (req, res, next)=>{
   //console.log(currency);
 
   axios.get(
-    "https://test.api.amadeus.com/v1/analytics/itinerary-price-metrics?originIataCode="+origin+"&destinationIataCode="+destination+"&departureDate="+depart_date+"&currencyCode="+currency+"&oneWay="+is_one_way,
+    "https://"+amadeus_base_url+"/v1/analytics/itinerary-price-metrics?originIataCode="+origin+"&destinationIataCode="+destination+"&departureDate="+depart_date+"&currencyCode="+currency+"&oneWay="+is_one_way,
     {
       headers: {
         "Authorization": ("Bearer "+ AmadeusAccessToken)
@@ -476,7 +478,7 @@ app.get('/get_hotel_sentiments/:hotelId', (req, res, next)=>{
   let hotel_id = req.params.hotelId;
 
   axios.get(
-    "https://test.api.amadeus.com/v2/e-reputation/hotel-sentiments?hotelIds="+hotel_id, 
+    "https://"+amadeus_base_url+"/v2/e-reputation/hotel-sentiments?hotelIds="+hotel_id, 
     {
 
       headers: {
@@ -508,7 +510,7 @@ app.post("/get_hotels/", (req, res, next)=>{
   let ratings = req.body.ratings;
 
   axios.get(
-    "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode="+city+"&checkInDate="+checkinDate+"&checkOutDate="+checkoutDate+"&roomQuantity="+roomQuantity+"&adults="+adults+"&currency="+currency+"&ratings="+ratings,//+"&radius=40&ratings="+ratings+"&view=FULL&sort=PRICE",
+    "https://"+amadeus_base_url+"/v2/shopping/hotel-offers?cityCode="+city+"&checkInDate="+checkinDate+"&checkOutDate="+checkoutDate+"&roomQuantity="+roomQuantity+"&adults="+adults+"&currency="+currency+"&ratings="+ratings,//+"&radius=40&ratings="+ratings+"&view=FULL&sort=PRICE",
     {
       headers: {
         "Authorization": ("Bearer "+ AmadeusAccessToken)
@@ -531,7 +533,7 @@ app.post("/get_hotel_rates/", (req, res, next)=>{
   console.log(all_params);
   //all_params = all_params.toString().replaceAll("^^and", "&").replaceAll("^^equal", "=").replaceAll("^^quo","'").replaceAll("^^quo2", '"');
   
-  axios.get("https://test.api.amadeus.com/v2/shopping/hotel-offers/by-hotel?"+all_params,
+  axios.get("https://"+amadeus_base_url+"/v2/shopping/hotel-offers/by-hotel?"+all_params,
   {
     headers: {
       "Authorization": ("Bearer "+ AmadeusAccessToken)
@@ -575,7 +577,7 @@ app.post('/finish_room_booking/', (req, res, next)=> {
 
   //res.send(req.body);
 
-  axios.post("test.api.amadeus.com/v1/booking/hotel-bookings",
+  axios.post(amadeus_base_url+"/v1/booking/hotel-bookings",
   {
     data: req.body
   },{
